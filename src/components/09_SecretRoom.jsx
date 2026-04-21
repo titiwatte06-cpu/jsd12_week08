@@ -1,0 +1,9 @@
+export default function SecretRoom(){
+
+    return(
+    <div className="flex flex-col justify-center items-center pt-10 bg-purple-800 w-[90%]">
+        <h1>SecretRoom</h1>
+        
+    </div>
+    );
+}

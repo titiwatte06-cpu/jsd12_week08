@@ -1,9 +1,8 @@
 import { useState } from "react";
-import Castle from "./components/Castle";
+import Castle from "./components/01_Castle";
 
 export default function App() {
   // creating state variable
-
   const [question, setQuestion] = useState("");
 
   const handleQuestion = (event) => {
@@ -15,9 +14,9 @@ export default function App() {
     <div className="pb-80 py-10 gap-y-4 flex flex-col justify-center items-center min-h-screen bg-blue-300">
       <p className="text-purple-400">
         Message for JSD12:
-
         <span className="text-yellow-300">
           {/* question or waiting for a message */}
+          {question ? question:"Waiting for a message...."}
         </span>
 
       </p>
@@ -25,7 +24,8 @@ export default function App() {
       <p className="text-green-300">Reply from Secret Room
         <span className="text-yellow-300">{/* answer for a waiting reply */}</span>
       </p>
-      <Castle />
+      <Castle question={question} />
+
     </div>
   ); 
 }

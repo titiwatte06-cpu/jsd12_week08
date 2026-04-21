@@ -1,10 +1,11 @@
-import Tower from "./Tower";
-export default function Castle(){
+import Tower from "./02_Tower";
+
+export default function Castle({question}){
 
     return(
     <div className="flex flex-col justify-center items-center pt-10 bg-red-500 w-full">
         <h1>Castle</h1>
-        <Tower />
+        <Tower question={question}/>
     </div>
     );
 }
