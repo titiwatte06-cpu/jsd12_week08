@@ -1,5 +1,5 @@
 
-export default function SecretRoom({question,answer,handleAnswer}){
+export default function SecretRoom({question,answer,handleAnswer,pokemonImage ,answerInput  }){
 
     
 
@@ -9,11 +9,15 @@ export default function SecretRoom({question,answer,handleAnswer}){
         <p>Message from outside
             <span> {question ? question:"Waiting for a message...."}</span>
         </p>
-        <textarea value={answer} onChange={handleAnswer} handleAnswer={handleAnswer} className="bg-white text-black" placeholder="Type your message here ..."/>
+        <textarea value={answerInput} onChange={handleAnswer} handleAnswer={handleAnswer} className="bg-white text-black" placeholder="Type your message here ..."/>
         <p>
             Reply to The outside:
             <span className="text-yellow-300"> {answer ? answer:"Waiting for a message...."}</span>
         </p>
+        <div className="bg-white border-b-red-700 border-solid">
+            {pokemonImage && <img src={pokemonImage} alt="pokemon" />}
+        </div>
+        
     </div>
     );
 }
